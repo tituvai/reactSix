@@ -12,22 +12,22 @@ import Hadding from '../Hadding'
 const BestSeller = () => {
   return (
     <>
-        <div className="py-18">
+        <div className="py-15">
             <Container>
                 <div className="">
                     <Hadding className={'text-[39px] text-hoverC font-bold pb-8'} text={'Bestseller'} as={'h3'} />
                 </div>
                 <Flex className={'justify-between'}>
-                    <div className="w-[25%]">
+                    <div className="w-[24%]">
                         <Product productSrc={bottol} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$3.34'}/>
                     </div>
-                    <div className="w-[25%]">
+                    <div className="w-[24%]">
                         <Product productSrc={whiteBag} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$4.04'}/>
                     </div>
-                    <div className="w-[25%]">
+                    <div className="w-[24%]">
                         <Product productSrc={cup} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$1.94'}/>
                     </div>
-                    <div className="w-[25%]">
+                    <div className="w-[24%]">
                         <Product productSrc={blackBag} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$5.00'}/>
                     </div>
                 </Flex>

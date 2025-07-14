@@ -7,11 +7,12 @@ import { MdLocalShipping } from "react-icons/md";
 import { FaUndo } from "react-icons/fa";
 
 const Information = () => {
+
   return (
     <div className="py-4">
         <Container>
             <Flex className={'justify-between'}>
-                <div className="flex items-center gap-2">
+                <div id='infoOne' className="flex items-center gap-2">
                     <PiNumberTwoBold className='text-xl'/>
                     <Hadding className={'text-base text-footer'} text={'Two years warranty'} as={'h5'}/>
                 </div>

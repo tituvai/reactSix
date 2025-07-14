@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
+
+
 @theme {
   --color-hoverC: #262626; 
   --color-menuC: #767676; 
   --color-searchC: #F5F5F3; 
   --color-footer: #6D6D6D; 
+  --color-arrowC:#979797;
 }

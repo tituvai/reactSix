@@ -8,12 +8,14 @@ import whact from '/src/assets/whact.png'
 import lemp from '/src/assets/lemp.png'
 
 const Ads = () => {
+
+ 
   return (
     <>
     <div className="pt-[75px] pb-[50px]">
         <Container>
             <Flex className={'justify-between'}>
-                <div className="w-[49%]">
+                <div id='addimg' className="w-[49%]">
                     <Link to={'/'}>
                     <Image imgSrc={jarbati} imgAlt={jarbati} />
                     </Link>

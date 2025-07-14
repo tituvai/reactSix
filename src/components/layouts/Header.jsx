@@ -7,8 +7,11 @@ import { Link } from 'react-router-dom'
 import Bards from '../../assets/icon/Bards'
 import Hadding from '../Hadding'
 import { FaUser, FaCaretDown, FaShoppingCart, FaSearch } from "react-icons/fa";
+import { MdOutlineClear } from "react-icons/md";
 
 const Header = () => {
+
+
   return (
    <>
      <section className='py-8'>
@@ -34,7 +37,7 @@ const Header = () => {
         <Container>
             <Flex className={'justify-between'}>
                 <div className="flex items-center gap-3">
-                    <Bards/>
+                    <Bards id='menuBar'/>
                     <Hadding className={'text-sm text-hoverC'} text={'Shop by Category'} as={'h4'}/>
                 </div>
                 <div className="relative">
@@ -50,6 +53,22 @@ const Header = () => {
                 </div>
             </Flex>
         </Container>
+
+        {/* <div id='menuPart' className="w-[400px] h-[500px] bg-stone-200 backdrop-sepia-50 py-[60px] px-[50px] absolute left-[-40%] top-1/7 z-30">
+            <div className="">
+                <ul id='menuItem'>
+                        <Link to={'/'}><li className='text-lg text-menuC font-medium hover:text-hoverC pb-3'>Home</li></Link>
+                        <Link to={'/shop'}><li className='text-lg text-menuC font-medium hover:text-hoverC pb-3'>Shop</li></Link>
+                        <Link to={'/about'}><li className='text-lg text-menuC font-medium hover:text-hoverC pb-3'>About</li></Link>
+                        <Link to={'/contact'}><li className='text-lg text-menuC font-medium hover:text-hoverC pb-3'>Contacts</li></Link>
+                        <Link to={'/journal'}><li className='text-lg text-menuC font-medium hover:text-hoverC pb-8'>Journal</li></Link>
+                    </ul>
+
+                    <FaShoppingCart id='clear' className='text-2xl'/>
+
+                    <MdOutlineClear className='absolute top-5 right-5 text-xl bg-white  rounded-full cursor-pointer '/>
+            </div>
+        </div> */}
     </section>
    </>
  

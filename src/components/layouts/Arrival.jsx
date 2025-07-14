@@ -9,41 +9,46 @@ import cat from '/src/assets/cat.png'
 import juri from '/src/assets/juri.png'
 import whact from '/src/assets/whact (2).png'
 import Hadding from '../Hadding';
+import NextArrow from '../NextArrow';
+import PrevArrow from '../PrevArrow';
 
 const Arrival = () => {
 
     var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    
+    nextArrow:<NextArrow/>,
+    prevArrow:<PrevArrow/>
   };
   return (
     <>
-        <div className="py-18">
+        <div className="py-15">
             <Container>
                 <div className="">
                     <Hadding className={'text-[39px] text-hoverC font-bold pb-8'} text={'New Arrivals'} as={'h3'}/>
                 </div>
-                <Slider {...settings }>
-                    <div>
+               <div className="-mx-2">
+                 <Slider {...settings }>
+                    <div className='px-2'>
                         <Product productSrc={time} newProduct={'10%'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$4.400'}/>
                     </div>
-                    <div>
+                    <div className='px-2'>
                         <Product productSrc={cat} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$4.400'}/>
                     </div>
-                    <div>
+                    <div className='px-2'>
                         <Product productSrc={juri} newProduct={'50%'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$4.400'}/>
                     </div>
-                    <div>
+                    <div className='px-2'>
                         <Product productSrc={time} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$4.400'}/>
                     </div> 
-                    <div>
+                    <div className='px-2'>
                         <Product productSrc={whact} newProduct={'20%'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$4.400'}/>
                     </div> 
                 </Slider>
+               </div>
             </Container>
         </div>
     </>
