@@ -3,7 +3,7 @@ import Container from "../Container"
 import Flex from "../Flex"
 import Hadding from "../Hadding"
 import { FaAngleRight } from "react-icons/fa6";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Product from "../Product";
 import cap from '/src/assets/cap.png'
 import cup from '/src/assets/cup.png'
@@ -21,6 +21,21 @@ import { useState } from "react";
 
 
 const Shop = () => {
+
+// Color Dropdown Part Start 
+const [color, setColor]=useState(false)
+const handelColor =()=>{
+  setColor(!color)
+}
+// Color Dropdown Part End
+
+// handelBrand Part Start 
+
+const [brand, setBrand]= useState(false)
+const handelBrand = ()=>{
+  setBrand(!brand)
+}
+// handelBrand Part End
 
   return (
     <>
@@ -55,9 +70,11 @@ const Shop = () => {
                   <div className="">
                      <Flex className={'justify-between pt-7'}>
                       <Hadding className={'text-lg text-hoverC font-bold '} text={'Shop by Category'} as={'h4'}/>
-                      <FaCaretDown className="text-menuC text-xl"/>
+                        {color ? <FaCaretDown onClick={handelColor} className="text-menuC text-xl"/> : <FaCaretUp onClick={handelColor} className="text-menuC text-xl"/>}
+                      
+                     
                      </Flex>
-                       <div className="">
+                    {color && <div className="">
                        <div className="relative border-b-1 border-borderC py-2">
                       <Hadding className={'text-base text-menuC leading-7.5 pl-5'} text={'Color 1'} as={'p'}/>
                         <div className="w-[10px] h-[10px] bg-black rounded-full absolute top-[18px] left-0"></div>
@@ -78,20 +95,20 @@ const Shop = () => {
                       <Hadding className={'text-base text-menuC leading-7.5 pl-5'} text={'Color 5'} as={'p'}/>
                         <div className="w-[10px] h-[10px] bg-green-400 rounded-full absolute top-[18px] left-0"></div>
                      </div>
-                    </div>
+                    </div>}
                   </div>
                   <div className="">
                     <Flex className={'justify-between pt-7'}>
                       <Hadding className={'text-lg text-hoverC leading-7.5 font-bold '} text={'Shop by Brand'} as={'h5'}/>
-                      <FaCaretDown className="text-xl text-menuC"/>
+                      {brand ? <FaCaretDown onClick={handelBrand} className="text-xl text-menuC"/> : <FaCaretUp onClick={handelBrand} className="text-menuC text-xl"/>}
                     </Flex>
-                    <div className="">
+                    {brand && <div className="">
                       <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 1'} as={'h6'}/>
-                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 1'} as={'h6'}/>
-                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 1'} as={'h6'}/>
-                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 1'} as={'h6'}/>
-                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 1'} as={'h6'}/>
-                    </div>
+                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 2'} as={'h6'}/>
+                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 3'} as={'h6'}/>
+                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 4'} as={'h6'}/>
+                      <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 5'} as={'h6'}/>
+                    </div>}
                   </div>
                   <div className="">
                       <Hadding className={'text-lg text-hoverC leading-7.5 font-bold pt-7'} text={'Shop by Price'} as={'h5'}/>

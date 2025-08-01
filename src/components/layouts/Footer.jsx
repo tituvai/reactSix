@@ -12,7 +12,7 @@ const Footer = () => {
     <>
     <section className='py-[50px] bg-searchC'>
         <Container>
-            <div className='flex justify-between'>
+            <div className='lg:flex justify-between'>
                 <div className="w-[13%]">
                     <Hadding className={'text-base text-hoverC font-bold leading-9'} text={'MENU'} as={'h3'}/>
                     <ul>
@@ -51,7 +51,7 @@ const Footer = () => {
                     <Link to={'/'}><Image imgSrc={logo} imgAlt={logo}/></Link>
                 </div>
             </div>
-            <Flex className={'justify-between pt-6'}>
+            <Flex className={'justify-between pt-6 flex-col md:flex-row'}>
                 <div className="flex gap-4">
                     <Link to={'/'}><FaFacebookF/></Link>
                     <Link to={'/'}><FaLinkedinIn /></Link>

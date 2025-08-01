@@ -14,13 +14,13 @@ const Ads = () => {
     <>
     <div className="pt-[75px] pb-[50px]">
         <Container>
-            <Flex className={'justify-between'}>
-                <div id='addimg' className="w-[49%]">
+            <Flex className={'justify-between flex-col md:flex-row'}>
+                <div className="w-full lg:w-[49%] pb-7 lg:pb-0">
                     <Link to={'/'}>
                     <Image imgSrc={jarbati} imgAlt={jarbati} />
                     </Link>
                 </div>
-                <div className="w-[49%]">
+                <div className="w-full lg:w-[49%]">
                     <Link to={'/'}><Image imgSrc={whact} imgAlt={whact} className={'w-[100%] mb-7'} /></Link>
                     <Link to={'/'}><Image imgSrc={lemp} imgAlt={lemp} className={'w-[100%]'}/></Link>
                 </div>

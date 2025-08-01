@@ -17,17 +17,17 @@ const BestSeller = () => {
                 <div className="">
                     <Hadding className={'text-[39px] text-hoverC font-bold pb-8'} text={'Bestseller'} as={'h3'} />
                 </div>
-                <Flex className={'justify-between'}>
-                    <div className="w-[24%]">
+                <Flex className={'justify-between flex-col md:flex-row'}>
+                    <div className="w-full lg:w-[24%]">
                         <Product productSrc={bottol} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$3.34'}/>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="w-full lg:w-[24%]">
                         <Product productSrc={whiteBag} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$4.04'}/>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="w-full lg:w-[24%]">
                         <Product productSrc={cup} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$1.94'}/>
                     </div>
-                    <div className="w-[24%]">
+                    <div className="w-full lg:w-[24%]">
                         <Product productSrc={blackBag} newProduct={'New'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$5.00'}/>
                     </div>
                 </Flex>
