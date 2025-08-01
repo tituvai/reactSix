@@ -13,7 +13,7 @@ const Footer = () => {
     <section className='py-[50px] bg-searchC'>
         <Container>
             <div className='lg:flex justify-between'>
-                <div className="w-[13%]">
+                <div className="lg:w-[13%]">
                     <Hadding className={'text-base text-hoverC font-bold leading-9'} text={'MENU'} as={'h3'}/>
                     <ul>
                         <Link to={'/'}><li className='text-sm text-footer leading-7'>Home</li></Link>
@@ -23,7 +23,7 @@ const Footer = () => {
                         <Link to={'/journal'}><li className='text-sm text-footer leading-7'>Journal</li></Link>
                     </ul>
                 </div>
-                <div className="w-[16%]">
+                <div className="lg:w-[16%]">
                     <Hadding className={'text-base text-hoverC font-bold leading-9'} text={'SHOP'} as={'h3'}/>
                     <ul>
                         <Link to={'/'}><li className='text-sm text-footer leading-7'>Category 1</li></Link>
@@ -33,7 +33,7 @@ const Footer = () => {
                         <Link to={'/'}><li className='text-sm text-footer leading-7'>Category 5</li></Link>
                     </ul>
                 </div>
-                <div className="w-[16%]">
+                <div className="lg:w-[16%]">
                     <Hadding className={'text-base text-hoverC font-bold leading-9'} text={'HELP'} as={'h3'}/>
                     <ul>
                         <Link to={'/'}><li className='text-sm text-footer leading-7'>Privacy Policy</li></Link>
@@ -43,11 +43,11 @@ const Footer = () => {
                         <Link to={'/'}><li className='text-sm text-footer leading-7'>Secure Payments</li></Link>
                     </ul>
                 </div>
-                <div className="w-[35%] pl-[12px]">
+                <div className="lg:w-[35%] pl-[12px]">
                     <Hadding className={'text-base text-hoverC font-bold leading-9 pr-[100px]'} text={'(052) 611-5711 company@domain.com'} as={'h3'}/>
                     <Hadding className={'text-sm text-footer leading-12'} text={'575 Crescent Ave. Quakertown, PA 18951'} as={'p'}/>
                 </div>
-                <div className="w-[20%]">
+                <div className="lg:w-[20%]">
                     <Link to={'/'}><Image imgSrc={logo} imgAlt={logo}/></Link>
                 </div>
             </div>
