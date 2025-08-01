@@ -22,6 +22,15 @@ import { useState } from "react";
 
 const Shop = () => {
 
+  // handelCategory Part start 
+
+  const [categore, setCategore]= useState(false)
+
+  const handelCategory = ()=>{
+    setCategore(!categore)
+  }
+  // handelCategory Part End
+
 // Color Dropdown Part Start 
 const [color, setColor]=useState(false)
 const handelColor =()=>{
@@ -37,6 +46,15 @@ const handelBrand = ()=>{
 }
 // handelBrand Part End
 
+// handelPrice Part Start
+
+const [price, setPrice] = useState(false)
+
+const handelPrice =()=>{
+  setPrice(!price)
+}
+// handelPrice Part End
+
   return (
     <>
         <div className="">
@@ -49,11 +67,13 @@ const handelBrand = ()=>{
                 <Link to={'/'}><span className="text-sm text-menuC">Products</span></Link>
               </Flex>
             </div>
-            <div className="">
               <div className={'flex justify-between'}>
-                <div className="w-[265px] pr-8">
-                  <div className="">
+                <div className="hidden lg:block w-[265px] pr-8">
+                  <Flex className={'justify-between'}>
                     <Hadding className={'text-lg text-hoverC font-bold pb-2'} text={'Shop by Category'} as={'h5'}/>
+                    {categore ? <FaCaretDown onClick={handelCategory} className="text-menuC text-xl"/> : <FaCaretUp onClick={handelCategory} className="text-menuC text-xl"/>}
+                  </Flex>
+                {categore &&  <div className="">
                     <Flex className={'justify-between border-b-1 border-borderC py-4'}>
                       <Hadding className={'text-base text-menuC leading-7.5'} text={'Category 1'} as={'h6'}/>
                       <span className="text-lg font-bold text-menuC">+</span>
@@ -66,7 +86,7 @@ const handelBrand = ()=>{
                     </Flex>
                       <Hadding className={'text-base text-menuC leading-7.5 border-b-1 border-borderC py-4'} text={'Category 1'} as={'h6'}/>
                       <Hadding className={'text-base text-menuC leading-7.5 border-b-1 border-borderC py-4'} text={'Category 1'} as={'h6'}/>
-                  </div>
+                  </div>}
                   <div className="">
                      <Flex className={'justify-between pt-7'}>
                       <Hadding className={'text-lg text-hoverC font-bold '} text={'Shop by Category'} as={'h4'}/>
@@ -110,17 +130,20 @@ const handelBrand = ()=>{
                       <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'Brand 5'} as={'h6'}/>
                     </div>}
                   </div>
-                  <div className="">
-                      <Hadding className={'text-lg text-hoverC leading-7.5 font-bold pt-7'} text={'Shop by Price'} as={'h5'}/>
+                  <Flex className="justify-between pt-7">
+                     <Hadding className={'text-lg text-hoverC leading-7.5 font-bold '} text={'Shop by Price'} as={'h5'}/>
+                      {price ? <FaCaretDown onClick={handelPrice} className="text-xl text-menuC"/> : <FaCaretUp onClick={handelPrice} className="text-menuC text-xl"/>}
+                  </Flex>
+                 {price && <div className="">
                       <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'$0.00 - $9.99'} as={'h6'}/>
                       <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'$10.00 - $19.99'} as={'h6'}/>
                       <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'$20.00 - $29.99'} as={'h6'}/>
                       <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'$30.00 - $39.99'} as={'h6'}/>
                       <Hadding className={'text-base text-menuC border-b-1 border-borderC py-3'} text={'$40.00 - $69.99'} as={'h6'}/>
-                  </div>
+                  </div>}
                 </div>
-                <div className="w-[900px]">
-                  <div className=" pb-9 flex gap-19 justify-end">
+                <div className="lg:w-[900px]">
+                  <div className=" pb-9 lg:flex gap-19 lg:justify-end">
                   <div className="flex items-center gap-x-3">
                     <Hadding className={'text-base text-menuC leading-7.5'} text={'Sort by:'} as={'h5'}/>
                     <div className="w-[249px] py-2 px-5 flex justify-between items-center border-borderC border-1">
@@ -128,7 +151,7 @@ const handelBrand = ()=>{
                       <FaCaretDown className="text-menuC"/>
                     </div>
                   </div>
-                  <div className="flex items-center gap-x-3">
+                  <div className="flex items-center gap-x-3 pt-5 lg:pt-0">
                     <Hadding className={'text-base text-menuC leading-7.5'} text={'Show:'} as={'h5'}/>
                     <div className="w-[149px] py-2 px-5 flex justify-between items-center border-borderC border-1">
                       <Hadding className={'text-base text-menuC leading-7.5'} text={'36'} as={'h5'}/>
@@ -137,44 +160,44 @@ const handelBrand = ()=>{
                   </div> 
                 </div>
                     <div className="flex items-center justify-between flex-wrap gap-y-5">
-                      <div className="w-[32%]">
+                      <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={cap} productAlt={'cap.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'} newProduct={'New'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={cup} productAlt={'cup.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'} newProduct={'New'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={cat} productAlt={'cat.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                     </div>
-                      <div className="w-[32%]">
+                      <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={timeBox} productAlt={'timeBox.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'} newProduct={'New'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={topjuri} productAlt={'topJuri.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={whiteBag} productAlt={'whiteBag.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'} newProduct={'New'}/>
                     </div>
-                      <div className="w-[32%]">
+                      <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={blackBag} productAlt={'blackBag.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={micuPhon} productAlt={'maicuPhone.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'} newProduct={'New'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={table} productAlt={'table.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'} newProduct={'New'}/>
                     </div>
-                      <div className="w-[32%]">
+                      <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={whact} productAlt={'whact (2).png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={juri} productAlt={'juri.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'}/>
                     </div>
-                    <div className="w-[32%]">
+                    <div className="w-[49%] lg:w-[32%]">
                       <Product productSrc={bottol} productAlt={'bottol.png'} producttTitle={'Basic Crew Neck Tee'} productPrice={'$44.00'} newProduct={'New'}/>
                     </div>
                     </div>
-                      <Flex className={'justify-between pt-10 pb-22'}>
+                      <Flex className={'justify-between pt-10 pb-22 flex-col md:flex-row'}>
                         <div className="">
                           <ul className="flex gap-3">
                             <li className="text-sm py-2 px-6 border-borderC text-menuC border-1 hover:bg-hoverC hover:text-white">1</li>
@@ -184,14 +207,12 @@ const handelBrand = ()=>{
                             <li className="text-sm py-2 px-6 border-borderC text-menuC border-1 hover:bg-hoverC hover:text-white">5</li>
                           </ul>
                         </div>
-                        <div className="">
-                          <Hadding className={'text-sm text-menuC'} text={'Products from 1 to 12 of 80'} as={'p'}/>
-                        </div>
+                          <Hadding className={'pt-4 lg:pt-0 text-sm text-menuC'} text={'Products from 1 to 12 of 80'} as={'p'}/>
                       </Flex>
                 </div>
               </div>
              
-            </div>
+            
           </Container>
         </div>
     </>
