@@ -22,7 +22,7 @@ const handleBars = ()=>{
 // mobile Bars Part End
   return (
    <>
-     <section className='py-8'>
+     <div className='py-8'>
         <Container>
             {/* Destop Divice Part Start  */}
            <div className="hidden lg:block">
@@ -82,9 +82,9 @@ const handleBars = ()=>{
 
              {/* Mobile Part End */}
         </Container>
-    </section>
+    </div>
 
-    <section className='py-6.5 bg-searchC hidden lg:block'>
+    <div className='py-6.5 bg-searchC hidden lg:block'>
         <Container>
             <Flex className={'justify-between'}>
                 <div className="flex items-center gap-3">
@@ -104,7 +104,7 @@ const handleBars = ()=>{
                 </div>
             </Flex>
         </Container>    
-    </section>
+    </div>
    </>
  
   )
