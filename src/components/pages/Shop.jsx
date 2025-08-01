@@ -70,7 +70,7 @@ const heandleBars = ()=>{
     <>
         <div className="">
           <Container>
-            <div className="py-10 lg:py-[120px]">
+            <div className=" py-10 lg:py-[120px]">
               <Hadding className={'text-[49px] text-hoverC font-bold'} text={'Products'} as={'h3'}/>
               <Flex className={'gap-3'}>
                 <Link to={'/'}><span className="text-sm text-menuC">Home</span></Link>
@@ -91,7 +91,7 @@ const heandleBars = ()=>{
                     <MdOutlineClear onClick={heandleBars} className="text-2xl"/>
                     <Hadding className={'text-lg text-hoverC font-medium'} text={'Filter By'} as={'h4'}/>
                   </Flex>
-                  <div className="lg:hidden  p-10">   
+                  <div className="lg:hidden  p-10 bg-stone-100">   
                   <Flex className={'justify-between'}>
                     <Hadding className={'text-lg text-hoverC font-bold pb-2'} text={'Shop by Category'} as={'h5'}/>
                     {categore ? <FaCaretDown onClick={handelCategory} className="text-menuC text-xl"/> : <FaCaretUp onClick={handelCategory} className="text-menuC text-xl"/>}

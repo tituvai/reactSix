@@ -8,9 +8,9 @@ import { FaCaretDown } from "react-icons/fa";
 const Jounal = () => {
   return (
      <>
-        <div className="pb-20">
+        <div className="px-5 lg:px-0 pb-20">
            <Container>
-                <div className="py-20">
+                <div className="py-10 lg:py-20">
                   <Hadding className={'text-[49px] text-hoverC font-bold'} text={'Checkout'} as={'h3'}/>
                     <Flex className={'gap-x-3'}>
                         <Link to={'/'}><span className='text-sm text-footer'>Home</span></Link>
@@ -21,16 +21,16 @@ const Jounal = () => {
                 <div className="">
                   <Hadding className={'text-base text-hoverC leading-7.5'} text={<><span className='text-menuC'>Have a coupon?</span><span>Click here to enter your code</span></>} as={'p'}/>
                 </div>
-                 <div className="w-[840px]">
+                 <div className="lg:w-[840px]">
                     <Hadding className={'text-[29px] text-hoverC font-bold pt-9'} text={'Billing Details'} as={'h3'}/>
-                    <Flex className={'py-5 gap-x-10'}>
-                        <div className="">
+                    <Flex className={'py-5 lg:gap-x-10 flex-col md:flex-row'}>
+                        <div className="w-full">
                         <label htmlFor="#" className='text-base text-hoverC font-bold leading-6 block'>Email address</label>
-                        <input className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4 w-[400px]' type="email" placeholder='company@domain.com' />
+                        <input className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4  lg:w-[400px]' type="email" placeholder='company@domain.com' />
                         </div>
-                        <div className="">
+                        <div className="w-full">
                         <label htmlFor="#" className='text-base text-hoverC font-bold leading-6 block'>Password</label>
-                        <input className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4 w-[400px]' type="password" placeholder='Enter Password' />
+                        <input className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4 lg:w-[400px]' type="password" placeholder='Enter Password' />
                         </div>
                     </Flex>
                      <label htmlFor="#" className='text-base text-hoverC font-bold leading-6 block'>Companye Name (optional)</label>
