@@ -67,7 +67,7 @@ const Arrival = () => {
 //   Product Patr End
   return (
     <>
-        <div className="py-15">
+        <div className="pt-10 lg:py-15">
             <Container>
                 <div className="">
                     <Hadding className={'text-[39px] text-hoverC font-bold pb-8'} text={'New Arrivals'} as={'h3'}/>

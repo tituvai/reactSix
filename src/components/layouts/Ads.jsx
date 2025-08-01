@@ -12,7 +12,7 @@ const Ads = () => {
  
   return (
     <>
-    <div className="pt-[75px] pb-[50px]">
+    <div className="lg:pt-[75px] lg:pb-[50px]">
         <Container>
             <Flex className={'justify-between flex-col md:flex-row'}>
                 <div className="w-full lg:w-[49%] pb-7 lg:pb-0">

@@ -12,17 +12,17 @@ const Information = () => {
     <div className="py-4">
         <Container>
             <Flex className={'justify-between'}>
-                <div id='infoOne' className="flex items-center gap-2">
+                <div className="flex lg:items-center gap-2">
                     <PiNumberTwoBold className='text-xl'/>
-                    <Hadding className={'text-base text-footer'} text={'Two years warranty'} as={'h5'}/>
+                    <Hadding className={'text-xs lg:text-base text-footer'} text={'Two years warranty'} as={'h5'}/>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex lg:items-center gap-2">
                     <MdLocalShipping className='text-xl'/>
-                    <Hadding className={'text-base text-footer'} text={'Free shipping'} as={'h5'}/>
+                    <Hadding className={'text-xs lg:text-base text-footer'} text={'Free shipping'} as={'h5'}/>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex lg:items-center gap-2">
                     <FaUndo/>
-                    <Hadding className={'text-base text-footer'} text={'Return policy in 30 days'} as={'h5'}/>
+                    <Hadding className={'text-xs lg:text-base text-footer'} text={'Return policy in 30 days'} as={'h5'}/>
                 </div>
             </Flex>
         </Container>

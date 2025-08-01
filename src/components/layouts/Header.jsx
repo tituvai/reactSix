@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import Bards from '../../assets/icon/Bards'
 import Hadding from '../Hadding'
 import { FaUser, FaCaretDown, FaShoppingCart, FaSearch, FaBars  } from "react-icons/fa";
+import { MdOutlineClear } from "react-icons/md";
 
 
 const Header = () => {
@@ -47,7 +48,9 @@ const handleBars = ()=>{
             <div className="lg:hidden">
                 <Flex className={'justify-between'}>
                 <div className="">
-                    <FaBars onClick={handleBars} className='text-2xl' />
+                    {bars ? <MdOutlineClear onClick={handleBars} className='text-2xl' /> : <FaBars onClick={handleBars} className='text-2xl' />}
+                    
+                    
                     </div>
                 <div className="">
                     <Link to={'/'}><Image imgSrc={logo} imgAlt={logo}/></Link>
@@ -100,9 +103,7 @@ const handleBars = ()=>{
                     <FaShoppingCart/>
                 </div>
             </Flex>
-        </Container>
-
-        
+        </Container>    
     </section>
    </>
  
