@@ -39,11 +39,11 @@ const Banner = () => {
         {...settings}
       >
         
-          <div className=" bg-[url(/src/assets/bannerOne.png)] h-[500px] bg-cover bg-center"></div>
+          <div className=" bg-[url(/src/assets/bannerOne.png)] h-[500px] bg-no-repeat bg-cover bg-center"></div>
         
-          <div className=" bg-[url(/src/assets/bannerTwo.png)] h-[500px] bg-cover bg-center"></div>
+          <div className=" bg-[url(/src/assets/bannerTwo.png)] h-[500px] bg-no-repeat bg-cover bg-center"></div>
         
-          <div className=" bg-[url(/src/assets/bannerThree.png)] h-[500px] bg-cover bg-center"></div>
+          <div className=" bg-[url(/src/assets/bannerThree.png)] h-[500px] bg-no-repeat bg-cover bg-center"></div>
         
       </Slider>
     </div>

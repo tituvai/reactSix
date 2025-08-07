@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '/src/components/Container'
 import Flex from '../Flex'
 import { Link } from 'react-router-dom'
@@ -6,6 +6,16 @@ import { FaAngleRight } from "react-icons/fa6";
 import Hadding from '../Hadding';
 import { FaCaretDown } from "react-icons/fa";
 const Jounal = () => {
+
+
+   // handleContiy Part Start 
+
+   const [contiy, setContiy]=useState(false)
+
+   const handleContiy =()=>{
+      setContiy(!contiy)
+   }
+   // handleContiy Part End
   return (
      <>
         <div className="px-5 lg:px-0 pb-20">
@@ -37,17 +47,22 @@ const Jounal = () => {
                         <input className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4 w-full' type="email" placeholder='Company Name' />
                      <label htmlFor="#" className='text-base text-hoverC font-bold leading-6 block pt-5'>Country *</label>
                            <div className="relative">
-                              <select name="" id="" className='appearance-none outline-0 border-b-1 border-borderC py-4 w-full'>
-                              <option value="">Dhaka</option>
-                              <option value="">Dhaka</option>
-                              <option value="">Dhaka</option>
-                              <option value="">Dhaka</option>
-                              <option value="">Dhaka</option>
-                           </select>
+                               <input onClick={handleContiy}  className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4 w-full' type="text" placeholder='Please select' />
                            <div className="">
-                              <FaCaretDown className='absolute top-1/2 right-5 text-menuC'/>
+                              <FaCaretDown onClick={handleContiy} className='absolute top-1/2 right-5 text-menuC'/>
                            </div>
                            </div>
+                            {contiy && <div className="w-full">
+                                 <ul>
+                                    <li className='text-base text-hoverC font-medium pb-3'>Dhaka</li>
+                                    <li className='text-base text-hoverC font-medium pb-3'>Sylhet</li>
+                                    <li className='text-base text-hoverC font-medium pb-3'>Rajshahi</li>
+                                    <li className='text-base text-hoverC font-medium pb-3'>Chittagong </li>
+                                    <li className='text-base text-hoverC font-medium pb-3'>Khulna</li>
+                                    <li className='text-base text-hoverC font-medium pb-3'>Comilla </li>
+                                    <li className='text-base text-hoverC font-medium pb-3'>Rangpur</li>
+                                 </ul>
+                               </div>}
                      <label htmlFor="#" className='text-base text-hoverC font-bold leading-6 block pt-5'>Street Address *</label>
                         <input className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4 w-full' type="email" placeholder='House number and street name' />
                         <input className='placeholder:text-sm placeholder:text-menuC outline-0 border-b-1 border-borderC py-4 w-full' type="email" placeholder='Apartment, suite, unit etc. (optional)' />
